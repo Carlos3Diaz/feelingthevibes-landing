@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FeelingTheVibes</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+    }
+
+    video.background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      backdrop-filter: brightness(0.9);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 8px #000;
+      background: linear-gradient(90deg, #ff0066, #00ccff, #ff9900);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s linear infinite;
+      background-size: 300% 100%;
+    }
+
+    p.tagline {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 500px;
+      text-shadow: 1px 1px 6px #000;
+      background: linear-gradient(270deg, #fff8dc, #ffd700, #fff8dc);
+      background-size: 200% auto;
+      animation: shine 2.5s linear infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      background: linear-gradient(90deg, #cc33ff, #3399ff);
+      color: white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .button span {
+      background: linear-gradient(90deg, #ff0066, #00ccff, #ff9900);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes shine {
+      0% {
+        background-position: -200%;
+      }
+      100% {
+        background-position: 200%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <video class="background-video" autoplay loop muted playsinline>
+    <source src="your-video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="content">
+    <h1>FeelingTheVibes</h1>
+    <p class="tagline">The soundtrack for your stress-free life.<br>Listen. Watch. Feel the Vibes.</p>
+    <a class="button" href="https://open.spotify.com/artist/6QNvBe6WOX3u2529OM8dRN" target="_blank">🎧 <span>Listen on Spotify</span></a>
+    <a class="button" href="https://www.youtube.com/@FeelingTheVibessongs" target="_blank">📺 <span>Watch on YouTube</span></a>
+  </div>
+</body>
+</html>
