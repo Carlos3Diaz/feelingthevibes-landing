@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FeelingTheVibes</title>
   <style>
+    @keyframes shine {
+      0% {
+        background-position: -200%;
+      }
+      100% {
+        background-position: 200%;
+      }
+    }
+
     body {
       margin: 0;
       padding: 0;
       background: url('Snapshot_688.JPG') no-repeat center center fixed;
       background-size: cover;
       font-family: 'Orbitron', sans-serif;
+      color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -34,7 +45,9 @@
       margin-bottom: 2rem;
       max-width: 400px;
       text-shadow: 1px 1px 6px #000;
-      background: linear-gradient(90deg, #ff0066, #00ccff, #ff9900);
+      background: linear-gradient(270deg, #fff8dc, #ffd700, #fff8dc);
+      background-size: 200% auto;
+      animation: shine 2.5s linear infinite;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -46,12 +59,16 @@
       font-size: 1rem;
       border-radius: 30px;
       text-decoration: none;
-      font-weight: bold;
+      background: linear-gradient(90deg, #cc33ff, #3399ff);
+      color: white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .button span {
       background: linear-gradient(90deg, #ff0066, #00ccff, #ff9900);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      transition: transform 0.2s ease;
     }
 
     .button:hover {
@@ -63,7 +80,7 @@
   <h1>FeelingTheVibes</h1>
   <p class="tagline">The soundtrack for your stress-free life. <br>Listen. Watch. Feel the Vibes.</p>
 
-  <a class="button" href="https://open.spotify.com/artist/6QNvBe6WOX3u2529OM8dRN" target="_blank">🎧 Listen on Spotify</a>
-  <a class="button" href="https://www.youtube.com/@FeelingTheVibessongs" target="_blank">📺 Watch on YouTube</a>
+  <a class="button" href="https://open.spotify.com/artist/6QNvBe6WOX3u2529OM8dRN" target="_blank">🎧 <span>Listen on Spotify</span></a>
+  <a class="button" href="https://www.youtube.com/@FeelingTheVibessongs" target="_blank">📺 <span>Watch on YouTube</span></a>
 </body>
 </html>
